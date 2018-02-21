@@ -1,0 +1,22 @@
+{
+  "name": "edu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:HungryBird/zhinengshe-edu-web.git",
+  "author": "Hechen <381548325@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "consolidate": "^0.15.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.2",
+    "express-static": "^1.2.5",
+    "multer": "^1.3.0",
+    "mysql": "^2.15.0",
+    "opn": "^5.2.0"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7"
+  }
+}
