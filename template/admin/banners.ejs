@@ -8,7 +8,28 @@
 	<div class="page">
 		<% include components/top.inc.ejs %>
 		<div class="content-wrap">
-			我是管理banners的
+			<div>
+				<!-- 问号代表当前页 == /admin/banner -->
+				<form action="?" method="post">
+					标题：<input type="text" name="title">
+					描述：<textarea name="description"></textarea><br>
+					连接：<input type="text" name="href">
+					<input type="submit" name="" value="添加">
+				</form>
+			</div>
+			<table border="1" width="80%">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>描述</th>
+						<th>链接</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<div>
+			修改用的
 		</div>
 	</div>
 </body>

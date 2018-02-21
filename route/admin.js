@@ -52,6 +52,24 @@ router.get('/', (req, res)=> {
 
 router.get('/banner', (req, res)=> {
 	res.render('admin/banners.ejs');
+});
+
+router.post('/banners', (req, res)=> {
+	let title = req.body.title;
+	let description = req.body.description;
+	let href = req.body.href;
+
+	if( !title || !description || !href ) {
+		res.status(400).send('arg err').end();
+	} else {
+		db.query(`INSERT INTO banner_table (title, description, href) VALUE('${title}', '${description}', '$(href)')`, (err, data)=> {
+			if(err) {
+				res.status(500).send('database err').end()
+			} else {
+				res.redirect('/admin/banners')
+			}
+		})
+	}
 })
 
 module.exports = router;
